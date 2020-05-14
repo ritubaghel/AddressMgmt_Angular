@@ -1,0 +1,38 @@
+<p>delete-address works!</p>
+<form #data="ngForm" (ngSubmit)= "deleteAddress(data)">
+    <div>
+        <label>Enter AddressId :</label>
+        <input type = "text" name ="addressId">
+    </div>
+    <br>
+    <div>
+        <label>Enter RetailerId :</label>
+        <input type = "text" name = "retailerId">
+    </div>
+    <br>
+    <div>
+        <label>Enter City :</label>
+        <input type = "text" name = "city">
+    </div>
+    <br>
+    <div>
+        <label>Enter State :</label>
+        <input type = "text" name = "state">
+    </div>
+    <br>
+    <div>
+        <label>Enter Zip :</label>
+        <input type = "text" name = "zip">
+    </div>
+    <br>
+    <div>
+        <label>Enter Field :</label>
+        <input type = "text" name = "field">
+    </div>
+    <br>
+    <input type = "submit" value = "Update Address">
+</form>
+
+<div *ngIf="address!=null">
+<h3>Address deleted Successfully</h3>  
+

@@ -1,0 +1,28 @@
+<p>view-address works!</p>
+<form #data="ngForm" (ngSubmit)="data.valid && viewAddress(data)">
+    <div>   
+        <label>AddressId</label>
+         <input type="text" name="addressId" ngModel #addressIdValueCtrl= "ngModel" required>
+         <div *ngIf="addressIdValueCtrl.errors!=null && addressIdValueCtrl.errors.required">
+             AddressId Value is required.
+        </div>
+        </div>
+        <input type="submit" value="Find Address" />
+</form>
+  
+
+<div *ngIf="address!=null">
+<h3>Address viewed successfully</h3>  
+  addressId = {{address.addressId}}
+ <br>
+ retailerId = {{address.retailerId}} 
+ <br>
+ city = {{address.city}}
+ <br>
+ state = {{address.state}}
+ <br>
+ zip = {{address.zip}}
+ <br>
+ field = {{address.field}}
+ <br>
+</div>
